@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A70061B240570E000DB90C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70061A240570E000DB90C8 /* AppDelegate.swift */; };
+		6A70061D240570E000DB90C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70061C240570E000DB90C8 /* SceneDelegate.swift */; };
+		6A70061F240570E000DB90C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70061E240570E000DB90C8 /* ViewController.swift */; };
+		6A700622240570E000DB90C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A700620240570E000DB90C8 /* Main.storyboard */; };
+		6A700624240570E200DB90C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A700623240570E200DB90C8 /* Assets.xcassets */; };
+		6A700627240570E200DB90C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A700625240570E200DB90C8 /* LaunchScreen.storyboard */; };
+		6A700632240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A700631240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunTests.swift */; };
+		6A70063D240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70063C240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6A70062E240570E200DB90C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A70060F240570E000DB90C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A700616240570E000DB90C8;
+			remoteInfo = KlimaanlageRiemer_ZeroMotivationRun;
+		};
+		6A700639240570E200DB90C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A70060F240570E000DB90C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A700616240570E000DB90C8;
+			remoteInfo = KlimaanlageRiemer_ZeroMotivationRun;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6A700617240570E000DB90C8 /* KlimaanlageRiemer_ZeroMotivationRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KlimaanlageRiemer_ZeroMotivationRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A70061A240570E000DB90C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6A70061C240570E000DB90C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6A70061E240570E000DB90C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6A700621240570E000DB90C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6A700623240570E200DB90C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A700626240570E200DB90C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6A700628240570E200DB90C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A70062D240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KlimaanlageRiemer_ZeroMotivationRunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A700631240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlimaanlageRiemer_ZeroMotivationRunTests.swift; sourceTree = "<group>"; };
+		6A700633240570E200DB90C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A700638240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KlimaanlageRiemer_ZeroMotivationRunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A70063C240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlimaanlageRiemer_ZeroMotivationRunUITests.swift; sourceTree = "<group>"; };
+		6A70063E240570E200DB90C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6A700614240570E000DB90C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A70062A240570E200DB90C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A700635240570E200DB90C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A70060E240570E000DB90C8 = {
+			isa = PBXGroup;
+			children = (
+				6A700619240570E000DB90C8 /* KlimaanlageRiemer_ZeroMotivationRun */,
+				6A700630240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunTests */,
+				6A70063B240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunUITests */,
+				6A700618240570E000DB90C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6A700618240570E000DB90C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A700617240570E000DB90C8 /* KlimaanlageRiemer_ZeroMotivationRun.app */,
+				6A70062D240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunTests.xctest */,
+				6A700638240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A700619240570E000DB90C8 /* KlimaanlageRiemer_ZeroMotivationRun */ = {
+			isa = PBXGroup;
+			children = (
+				6A70061A240570E000DB90C8 /* AppDelegate.swift */,
+				6A70061C240570E000DB90C8 /* SceneDelegate.swift */,
+				6A70061E240570E000DB90C8 /* ViewController.swift */,
+				6A700620240570E000DB90C8 /* Main.storyboard */,
+				6A700623240570E200DB90C8 /* Assets.xcassets */,
+				6A700625240570E200DB90C8 /* LaunchScreen.storyboard */,
+				6A700628240570E200DB90C8 /* Info.plist */,
+			);
+			path = KlimaanlageRiemer_ZeroMotivationRun;
+			sourceTree = "<group>";
+		};
+		6A700630240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunTests */ = {
+			isa = PBXGroup;
+			children = (
+				6A700631240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunTests.swift */,
+				6A700633240570E200DB90C8 /* Info.plist */,
+			);
+			path = KlimaanlageRiemer_ZeroMotivationRunTests;
+			sourceTree = "<group>";
+		};
+		6A70063B240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6A70063C240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunUITests.swift */,
+				6A70063E240570E200DB90C8 /* Info.plist */,
+			);
+			path = KlimaanlageRiemer_ZeroMotivationRunUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6A700616240570E000DB90C8 /* KlimaanlageRiemer_ZeroMotivationRun */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A700641240570E200DB90C8 /* Build configuration list for PBXNativeTarget "KlimaanlageRiemer_ZeroMotivationRun" */;
+			buildPhases = (
+				6A700613240570E000DB90C8 /* Sources */,
+				6A700614240570E000DB90C8 /* Frameworks */,
+				6A700615240570E000DB90C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KlimaanlageRiemer_ZeroMotivationRun;
+			productName = KlimaanlageRiemer_ZeroMotivationRun;
+			productReference = 6A700617240570E000DB90C8 /* KlimaanlageRiemer_ZeroMotivationRun.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6A70062C240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A700644240570E200DB90C8 /* Build configuration list for PBXNativeTarget "KlimaanlageRiemer_ZeroMotivationRunTests" */;
+			buildPhases = (
+				6A700629240570E200DB90C8 /* Sources */,
+				6A70062A240570E200DB90C8 /* Frameworks */,
+				6A70062B240570E200DB90C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A70062F240570E200DB90C8 /* PBXTargetDependency */,
+			);
+			name = KlimaanlageRiemer_ZeroMotivationRunTests;
+			productName = KlimaanlageRiemer_ZeroMotivationRunTests;
+			productReference = 6A70062D240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6A700637240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A700647240570E200DB90C8 /* Build configuration list for PBXNativeTarget "KlimaanlageRiemer_ZeroMotivationRunUITests" */;
+			buildPhases = (
+				6A700634240570E200DB90C8 /* Sources */,
+				6A700635240570E200DB90C8 /* Frameworks */,
+				6A700636240570E200DB90C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A70063A240570E200DB90C8 /* PBXTargetDependency */,
+			);
+			name = KlimaanlageRiemer_ZeroMotivationRunUITests;
+			productName = KlimaanlageRiemer_ZeroMotivationRunUITests;
+			productReference = 6A700638240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6A70060F240570E000DB90C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Cedric Zwahlen";
+				TargetAttributes = {
+					6A700616240570E000DB90C8 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					6A70062C240570E200DB90C8 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 6A700616240570E000DB90C8;
+					};
+					6A700637240570E200DB90C8 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 6A700616240570E000DB90C8;
+					};
+				};
+			};
+			buildConfigurationList = 6A700612240570E000DB90C8 /* Build configuration list for PBXProject "KlimaanlageRiemer_ZeroMotivationRun" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6A70060E240570E000DB90C8;
+			productRefGroup = 6A700618240570E000DB90C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6A700616240570E000DB90C8 /* KlimaanlageRiemer_ZeroMotivationRun */,
+				6A70062C240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunTests */,
+				6A700637240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A700615240570E000DB90C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A700627240570E200DB90C8 /* LaunchScreen.storyboard in Resources */,
+				6A700624240570E200DB90C8 /* Assets.xcassets in Resources */,
+				6A700622240570E000DB90C8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A70062B240570E200DB90C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A700636240570E200DB90C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A700613240570E000DB90C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A70061F240570E000DB90C8 /* ViewController.swift in Sources */,
+				6A70061B240570E000DB90C8 /* AppDelegate.swift in Sources */,
+				6A70061D240570E000DB90C8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A700629240570E200DB90C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A700632240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A700634240570E200DB90C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A70063D240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6A70062F240570E200DB90C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A700616240570E000DB90C8 /* KlimaanlageRiemer_ZeroMotivationRun */;
+			targetProxy = 6A70062E240570E200DB90C8 /* PBXContainerItemProxy */;
+		};
+		6A70063A240570E200DB90C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A700616240570E000DB90C8 /* KlimaanlageRiemer_ZeroMotivationRun */;
+			targetProxy = 6A700639240570E200DB90C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6A700620240570E000DB90C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A700621240570E000DB90C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6A700625240570E200DB90C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A700626240570E200DB90C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6A70063F240570E200DB90C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6A700640240570E200DB90C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6A700642240570E200DB90C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3QL75UNV78;
+				INFOPLIST_FILE = KlimaanlageRiemer_ZeroMotivationRun/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cedric.zwahlen.KlimaanlageRiemer-ZeroMotivationRun";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6A700643240570E200DB90C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3QL75UNV78;
+				INFOPLIST_FILE = KlimaanlageRiemer_ZeroMotivationRun/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cedric.zwahlen.KlimaanlageRiemer-ZeroMotivationRun";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6A700645240570E200DB90C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3QL75UNV78;
+				INFOPLIST_FILE = KlimaanlageRiemer_ZeroMotivationRunTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cedric.zwahlen.KlimaanlageRiemer-ZeroMotivationRunTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KlimaanlageRiemer_ZeroMotivationRun.app/KlimaanlageRiemer_ZeroMotivationRun";
+			};
+			name = Debug;
+		};
+		6A700646240570E200DB90C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3QL75UNV78;
+				INFOPLIST_FILE = KlimaanlageRiemer_ZeroMotivationRunTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cedric.zwahlen.KlimaanlageRiemer-ZeroMotivationRunTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KlimaanlageRiemer_ZeroMotivationRun.app/KlimaanlageRiemer_ZeroMotivationRun";
+			};
+			name = Release;
+		};
+		6A700648240570E200DB90C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3QL75UNV78;
+				INFOPLIST_FILE = KlimaanlageRiemer_ZeroMotivationRunUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cedric.zwahlen.KlimaanlageRiemer-ZeroMotivationRunUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KlimaanlageRiemer_ZeroMotivationRun;
+			};
+			name = Debug;
+		};
+		6A700649240570E200DB90C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3QL75UNV78;
+				INFOPLIST_FILE = KlimaanlageRiemer_ZeroMotivationRunUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cedric.zwahlen.KlimaanlageRiemer-ZeroMotivationRunUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KlimaanlageRiemer_ZeroMotivationRun;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A700612240570E000DB90C8 /* Build configuration list for PBXProject "KlimaanlageRiemer_ZeroMotivationRun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A70063F240570E200DB90C8 /* Debug */,
+				6A700640240570E200DB90C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A700641240570E200DB90C8 /* Build configuration list for PBXNativeTarget "KlimaanlageRiemer_ZeroMotivationRun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A700642240570E200DB90C8 /* Debug */,
+				6A700643240570E200DB90C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A700644240570E200DB90C8 /* Build configuration list for PBXNativeTarget "KlimaanlageRiemer_ZeroMotivationRunTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A700645240570E200DB90C8 /* Debug */,
+				6A700646240570E200DB90C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A700647240570E200DB90C8 /* Build configuration list for PBXNativeTarget "KlimaanlageRiemer_ZeroMotivationRunUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A700648240570E200DB90C8 /* Debug */,
+				6A700649240570E200DB90C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6A70060F240570E000DB90C8 /* Project object */;
+}
