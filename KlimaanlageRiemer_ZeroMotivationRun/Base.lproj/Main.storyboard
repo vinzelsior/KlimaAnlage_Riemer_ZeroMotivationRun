@@ -1,24 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KlimaanlageRiemer_ZeroMotivationRun" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="bj6-u7-za2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QZa-AZ-br0">
+                            <size key="itemSize" width="400" height="835"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="8oz-Wo-QWH" customClass="RoomRepresentationCell" customModule="KlimaanlageRiemer_ZeroMotivationRun" customModuleProvider="target">
+                                <rect key="frame" x="7" y="0.0" width="400" height="835"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="agu-mC-gjy">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="835"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rO-0r-t9f">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="835"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Tmb-R6-I6u">
+                                                    <rect key="frame" x="5" y="228" width="390" height="602"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U0k-l6-UZv">
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="463.66666666666669"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="iGb-23-u7u">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="463.66666666666669"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Room Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ya-2b-N1u">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="24"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="targetTempValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfW-iL-aqK">
+                                                                            <rect key="frame" x="0.0" y="218.66666666666669" width="390" height="20.333333333333343"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="10" maxValue="30" minimumValueImage="thermometer.snowflake" catalog="system" maximumValueImage="thermometer.sun" translatesAutoresizingMaskIntoConstraints="NO" id="Ic2-UU-jYb">
+                                                                            <rect key="frame" x="-2" y="433.66666666666663" width="394" height="31"/>
+                                                                        </slider>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZNc-qC-F6N">
+                                                            <rect key="frame" x="0.0" y="487.66666666666657" width="390" height="114.33333333333331"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hysteresis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjw-yb-YXK">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="24"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hysteresisValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJz-Os-me9">
+                                                                    <rect key="frame" x="0.0" y="44" width="390" height="20.333333333333329"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.5" maxValue="5" minimumValueImage="arrow.down.circle" catalog="system" maximumValueImage="arrow.up.circle" translatesAutoresizingMaskIntoConstraints="NO" id="IR5-Em-o9C">
+                                                                    <rect key="frame" x="-2" y="84.333333333333371" width="394" height="31"/>
+                                                                </slider>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Xof-L1-XSF">
+                                                    <rect key="frame" x="5" y="5" width="390" height="218"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBo-Xn-gwu">
+                                                            <rect key="frame" x="138.66666666666666" y="0.0" width="113" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currentTemp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eG7-0b-w81">
+                                                            <rect key="frame" x="106" y="39" width="178" height="36"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tP8-aa-4ez">
+                                                            <rect key="frame" x="10" y="90" width="370" height="128"/>
+                                                        </skView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="tP8-aa-4ez" firstAttribute="leading" secondItem="Xof-L1-XSF" secondAttribute="leading" constant="10" id="gGS-tI-xC0"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tP8-aa-4ez" secondAttribute="trailing" constant="10" id="rk8-2l-emZ"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="Lfx-5A-Vbz" firstAttribute="trailing" secondItem="Xof-L1-XSF" secondAttribute="trailing" constant="5" id="0wV-cv-Yac"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xof-L1-XSF" secondAttribute="trailing" constant="5" id="5hz-PE-ayC"/>
+                                                <constraint firstItem="Tmb-R6-I6u" firstAttribute="leading" secondItem="6rO-0r-t9f" secondAttribute="leading" constant="5" id="9Yp-xu-8aO"/>
+                                                <constraint firstItem="Xof-L1-XSF" firstAttribute="leading" secondItem="Lfx-5A-Vbz" secondAttribute="leading" constant="5" id="OLr-LC-cQH"/>
+                                                <constraint firstItem="Xof-L1-XSF" firstAttribute="leading" secondItem="6rO-0r-t9f" secondAttribute="leading" constant="5" id="gY9-Ux-PdK"/>
+                                                <constraint firstItem="Xof-L1-XSF" firstAttribute="top" secondItem="6rO-0r-t9f" secondAttribute="top" constant="5" id="is0-4H-RBu"/>
+                                                <constraint firstAttribute="trailing" secondItem="Tmb-R6-I6u" secondAttribute="trailing" constant="5" id="o58-Y9-Ur2"/>
+                                                <constraint firstAttribute="bottom" secondItem="Tmb-R6-I6u" secondAttribute="bottom" constant="5" id="r7t-iq-PBu"/>
+                                                <constraint firstItem="Xof-L1-XSF" firstAttribute="top" secondItem="Lfx-5A-Vbz" secondAttribute="top" constant="5" id="rDU-V8-lRD"/>
+                                                <constraint firstItem="Tmb-R6-I6u" firstAttribute="top" secondItem="Xof-L1-XSF" secondAttribute="bottom" constant="5" id="zeD-jH-Uts"/>
+                                            </constraints>
+                                            <viewLayoutGuide key="safeArea" id="Lfx-5A-Vbz"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6rO-0r-t9f" firstAttribute="leading" secondItem="agu-mC-gjy" secondAttribute="leading" id="7fl-p8-2cY"/>
+                                        <constraint firstAttribute="trailing" secondItem="6rO-0r-t9f" secondAttribute="trailing" id="9JL-lf-Hnd"/>
+                                        <constraint firstAttribute="bottom" secondItem="6rO-0r-t9f" secondAttribute="bottom" id="H0x-C4-fhL"/>
+                                        <constraint firstItem="6rO-0r-t9f" firstAttribute="top" secondItem="agu-mC-gjy" secondAttribute="top" id="xwK-j3-caT"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="400" height="835"/>
+                                <connections>
+                                    <outlet property="currentTempLabel" destination="eG7-0b-w81" id="tx0-6c-pKq"/>
+                                    <outlet property="hysteresisLabel" destination="nJz-Os-me9" id="99z-8Q-mJs"/>
+                                    <outlet property="hysteresisSlider" destination="IR5-Em-o9C" id="ZSN-zK-3G1"/>
+                                    <outlet property="targetTempLabel" destination="PfW-iL-aqK" id="rCr-dm-MW3"/>
+                                    <outlet property="targetTempSlider" destination="Ic2-UU-jYb" id="C2Q-iD-M0z"/>
+                                    <outlet property="visualisation" destination="tP8-aa-4ez" id="IPK-Fc-oIt"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                    </collectionView>
+                    <connections>
+                        <outlet property="collectionView" destination="bj6-u7-za2" id="0er-oR-h9B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.down.circle" catalog="system" width="64" height="60"/>
+        <image name="arrow.up.circle" catalog="system" width="64" height="60"/>
+        <image name="thermometer.snowflake" catalog="system" width="56" height="64"/>
+        <image name="thermometer.sun" catalog="system" width="54" height="64"/>
+    </resources>
 </document>

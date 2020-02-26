@@ -10,59 +10,99 @@ import Foundation
 
 struct Thermostat {
     
-    var currentTemp: Double
-    var min: Double
-    var max: Double
-    var hysteresis: Double
+    // MARK: Public Fields
     
-    private var wait = false
+    var currentTemp: Double
+    
+    var targetTemp: Double {
+        didSet {
+            recalculateMinMax()
+        }
+    }
+    var hysteresis: Double {
+        didSet {
+            recalculateMinMax()
+        }
+    }
     
     var cool: Bool {
         mutating get {
+            // upper threshold
+            cooling = currentTemp > max ? true : cooling
+            // lower threshold
+            cooling = currentTemp < targetTemp ? false : cooling
+            // error mitigation
+//            cooling = actionIsValid()
             
-            wait = (max - hysteresis) > currentTemp ? true : wait
-            
-            if currentTemp > max && !wait {
-                wait = true
-                return true
-            } else {
-                return false
-            }
+            return cooling
         }
     }
     
     var heat: Bool {
         mutating get {
+            // upper threshold
+            heating = currentTemp > targetTemp ? false : heating
+            // lower threshold
+            heating = currentTemp < min ? true : heating
+            // error mitigation
+//            heating = actionIsValid()
             
-            wait = (min + hysteresis) < currentTemp ? true : wait
-            
-            if currentTemp < min && !wait {
-                wait = true
-                return true
-            } else {
-                return false
-            }
+            return heating
         }
     }
     
-    var room: PT1Glied
+    // MARK: Private Fields
     
-    init(initialTemp: Double, min: Double, max: Double, hysteresis: Double, tau: Double = 120) {
+    private var min: Double
+    private var max: Double
+    private var cooling = false
+    private var heating = false
+    
+    private var outsideTemp: Double
+    private var heaterTemp: Double
+    private var coolerTemp: Double
+    
+    /// represents the room, which the thermostat controls the temperature of.
+    private var room: PT1Glied
+    
+    // MARK: Methods
+    
+    init(initialTemp: Double, targetTemp: Double, hysteresis: Double, outsideTemp: Double = 15, heaterTemp: Double = 30, coolerTemp: Double = 10, tau: Double = 120) {
         
 // TO-DO:  implement sanitisation, so make initialiser failable.
-        
+        self.targetTemp = targetTemp
         self.currentTemp = initialTemp
-        self.min = min
-        self.max = max
+        self.min = targetTemp - hysteresis
+        self.max = targetTemp + hysteresis
         self.hysteresis = hysteresis
-        self.room = PT1Glied(tau: tau)
+        self.room = PT1Glied(tau: tau, initialVal: initialTemp)
+        
+        self.outsideTemp = outsideTemp
+        self.heaterTemp = heaterTemp
+        self.coolerTemp = coolerTemp
     }
     
     /**
      called every update cycle.
      */
-    mutating func updateTemperature() -> Double {
-        currentTemp = room.integrate(currentTemperature: currentTemp)
-        return currentTemp
+    mutating func updateTemperature() {
+        
+        if      cool { currentTemp = room.integrate(currentTemperature: coolerTemp) }
+        else if heat { currentTemp = room.integrate(currentTemperature: heaterTemp) }
+        else         { currentTemp = room.integrate(currentTemperature: outsideTemp) }
+    }
+    
+    private mutating func recalculateMinMax() {
+        min = targetTemp - hysteresis
+        max = targetTemp + hysteresis
+    }
+    
+    private func actionIsValid() -> Bool {
+        if cooling && heating {
+//            this condition is unacceptable, so just ignore them both, and do nothing until this situation resolves
+            return false
+        } else {
+            return true
+        }
     }
 }
