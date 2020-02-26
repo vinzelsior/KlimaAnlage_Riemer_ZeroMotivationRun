@@ -10,9 +10,14 @@ import Foundation
 
 struct Thermostat {
     
+    static var outsideTemp: Double = 15
+    
     // MARK: Public Fields
     
     var currentTemp: Double
+    
+///   helper variable, to reduce recalcualtion 
+    var average: Double
     
     var targetTemp: Double {
         didSet {
@@ -30,7 +35,7 @@ struct Thermostat {
             // upper threshold
             cooling = currentTemp > max ? true : cooling
             // lower threshold
-            cooling = currentTemp < targetTemp ? false : cooling
+            cooling = currentTemp < min ? false : cooling
             // error mitigation
 //            cooling = actionIsValid()
             
@@ -41,7 +46,7 @@ struct Thermostat {
     var heat: Bool {
         mutating get {
             // upper threshold
-            heating = currentTemp > targetTemp ? false : heating
+            heating = currentTemp > max ? false : heating
             // lower threshold
             heating = currentTemp < min ? true : heating
             // error mitigation
@@ -58,7 +63,6 @@ struct Thermostat {
     private var cooling = false
     private var heating = false
     
-    private var outsideTemp: Double
     private var heaterTemp: Double
     private var coolerTemp: Double
     
@@ -69,6 +73,8 @@ struct Thermostat {
     
     init(initialTemp: Double, targetTemp: Double, hysteresis: Double, outsideTemp: Double = 15, heaterTemp: Double = 30, coolerTemp: Double = 10, tau: Double = 120) {
         
+        self.average = (heaterTemp + coolerTemp) / 2
+        
 // TO-DO:  implement sanitisation, so make initialiser failable.
         self.targetTemp = targetTemp
         self.currentTemp = initialTemp
@@ -77,7 +83,8 @@ struct Thermostat {
         self.hysteresis = hysteresis
         self.room = PT1Glied(tau: tau, initialVal: initialTemp)
         
-        self.outsideTemp = outsideTemp
+        Thermostat.outsideTemp = outsideTemp
+        
         self.heaterTemp = heaterTemp
         self.coolerTemp = coolerTemp
     }
@@ -89,12 +96,12 @@ struct Thermostat {
         
         if      cool { currentTemp = room.integrate(currentTemperature: coolerTemp) }
         else if heat { currentTemp = room.integrate(currentTemperature: heaterTemp) }
-        else         { currentTemp = room.integrate(currentTemperature: outsideTemp) }
+        else         { currentTemp = room.integrate(currentTemperature: Thermostat.outsideTemp) }
     }
     
     private mutating func recalculateMinMax() {
-        min = targetTemp - hysteresis
-        max = targetTemp + hysteresis
+        min = (targetTemp - hysteresis) < coolerTemp ? coolerTemp + 0.1 : targetTemp - hysteresis
+        max = (targetTemp + hysteresis) > heaterTemp ? heaterTemp - 0.1 : targetTemp + hysteresis
     }
     
     private func actionIsValid() -> Bool {

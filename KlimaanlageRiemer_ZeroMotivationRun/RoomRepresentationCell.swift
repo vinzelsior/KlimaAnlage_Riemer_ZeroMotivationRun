@@ -12,7 +12,7 @@ import SpriteKit
 
 class RoomRepresentationCell: UICollectionViewCell, SKViewDelegate, SKSceneDelegate {
     
-    var thermostat: Thermostat?
+    private var thermostat: Thermostat?
     
     @IBOutlet weak var visualisation: SKView!
     
@@ -27,26 +27,41 @@ class RoomRepresentationCell: UICollectionViewCell, SKViewDelegate, SKSceneDeleg
     
     override func awakeFromNib() {
         
-        thermostat = Thermostat(initialTemp: 19, targetTemp: Double(targetTempSlider!.value), hysteresis: Double(hysteresisSlider!.value), outsideTemp: 15, heaterTemp: Double(targetTempSlider!.maximumValue), coolerTemp: Double(targetTempSlider!.minimumValue), tau: 120)
+        thermostat = Thermostat(initialTemp: 19, targetTemp: Double(targetTempSlider!.value), hysteresis: Double(hysteresisSlider!.value), heaterTemp: Double(targetTempSlider!.maximumValue), coolerTemp: Double(targetTempSlider!.minimumValue), tau: 900)
         
         let scene = SKScene(size: CGSize(width: visualisation.frame.width, height: visualisation.frame.height))
 
         visualisation.presentScene(scene)
         visualisation.delegate = self
         visualisation.scene?.delegate = self
+        
+        targetTempLabel.text = String(targetTempSlider.value.truncate(places: 2)) + "°"
+        hysteresisLabel.text = "∆" + String(hysteresisSlider.value.truncate(places: 2)) + "°"
+        
     }
     
     func update(_ currentTime: TimeInterval, for scene: SKScene) {
         
+        thermostat!.updateTemperature()
+        
+        currentTempLabel.text = String(thermostat!.currentTemp.truncate(places: 2)) + "°"
+        
+    }
+    
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        
         thermostat!.targetTemp = Double(targetTempSlider.value)
         thermostat!.hysteresis = Double(hysteresisSlider.value)
         
-        thermostat!.updateTemperature()
+        DispatchQueue.main.async {
+            self.targetTempLabel.text = String(self.targetTempSlider.value.truncate(places: 2)) + "°"
+            self.hysteresisLabel.text = "∆" + String(self.hysteresisSlider.value.truncate(places: 2)) + "°"
+        }
         
-//        technically, i wouldn't need this function to update these values... but I might as well.
-        currentTempLabel.text = String(thermostat!.currentTemp.truncate(places: 2))
-        targetTempLabel.text = String(targetTempSlider.value.truncate(places: 2))
-        hysteresisLabel.text = String(hysteresisSlider.value.truncate(places: 2))
-        
+        if thermostat!.average > Double(targetTempSlider.value) {
+            targetTempSlider.tintColor = .white + ( .orange * ((Double(targetTempSlider.value) - thermostat!.average) / (Double(targetTempSlider.maximumValue) - thermostat!.average)) * 0.7)
+        } else {
+            targetTempSlider.tintColor = .white + ( .cyan * ((thermostat!.average - (Double(targetTempSlider.value))) / (thermostat!.average - Double(targetTempSlider.minimumValue))) * 0.7)
+        }
     }
 }
