@@ -1,0 +1,50 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 Helvetica-Oblique;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \ul \ulc0 Cedric Zwahlen, 27.02.2020 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b \cf0 \ulnone \
+\
+\
+Dokumentation
+\f0\b0  \
+\
+
+\f1\b Planung
+\f0\b0 \
+\
+Bevor ich begann zu programmieren, habe ich mir ein paar Gedanken \'fcber die Struktur des Codes gemacht. Ich merkte schnell, dass ich ein PT Element brauchen wollte, um die W\'e4rmeausbreitung zu simulieren, und ich wollte daf\'fcr eine Rendering Engine benutzen (Spritekit) welche die entsprechenden Funktionen periodisch aufruft.\
+\
+
+\f1\b Programm
+\f0\b0 \
+\
+Die Kommentare in den Dokumenten sollten ausreichen, um ein Verst\'e4ndnis \'fcber den Code zu erlangen. \
+\
+Ich benutze ein PT1 Glied um die Raumtemperatur zu simulieren, da eine Heizung bzw. eine K\'fchlung die Temperatur nur bis zu einem gewissen Punkt ver\'e4ndern kann, und irgendwann einen Maximal- oder Minimalwert erreicht wird. In diesem Programm wird die Heizung maximal 30\'b0 warm, und kann den Raum somit nicht auf h\'f6here Temperaturen heizen. Dies bedeutet, umso n\'e4her die Raumtemperatur ich dem Endwert der Heizung/ K\'fchlung n\'e4hert, umso langsamer ist die Ver\'e4nderung der Temperatur. \
+\
+Meine Heizungssimulation versucht in gewissen F\'e4llen Energie zu sparen, indem die Aussentemperatur w\'e4hrend des Temperaturanpassungsverfahrens in betracht gezogen wird. \
+\
+	
+\f2\i Beispiel
+\f0\i0 :\
+\
+	Die Aussentemperatur betr\'e4gt 20\'b0 und die momentane Raumtemperatur liegt bei 23\'b0. Der Benutzer m\'f6chte die Temperatur im Raum nun auf 21\'b0 bringen. In diesem Fall wird die K\'fchlung nicht einschalten, \
+	und es wird abgewartet, bis sich der Raum, aufgrund der Aussentemperatur auf 21\'b0 (Hysterese ausgenommen) abk\'fchlt. Dies ist nat\'fcrlich nicht ideal wenn die Temperatur in einer bestimmten Zeit ver\'e4ndert 	werden muss.\
+\
+Angeh\'e4ngt sind einige Screenshots der Applikation:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+Hier betr\'e4gt die Aussentemperatur ca. 20\'b0, was einige R\'e4ume zum K\'fchlen und andere zum Heizen bringt.\
+\
+Bei dieser hohen Aussentemperatur werden R\'e4ume nur gek\'fchlt. Dies soll Energie sparen.\
+\
+Es werden nur zwei R\'e4ume geheizt.\
+}
