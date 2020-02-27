@@ -38,7 +38,7 @@ struct Thermostat {
         }
     }
     
-    /// Indicates wether the cooler is on or off.
+    /// Indicates whether the cooler is on or off.
     var cool: Bool {
         mutating get {
             // upper threshold
@@ -55,7 +55,7 @@ struct Thermostat {
         }
     }
     
-    /// Indicates wether the heater is on or off.
+    /// Indicates whether the heater is on or off.
     var heat: Bool {
         mutating get {
             // upper threshold
@@ -110,11 +110,11 @@ struct Thermostat {
         self.max = targetTemp + hysteresis
         self.hysteresis = hysteresis
         self.room = PT1Glied(tau: tau, initialVal: initialTemp)
+        self.heaterTemp = heaterTemp
+        self.coolerTemp = coolerTemp
         
         Thermostat.outsideTemp = outsideTemp
         
-        self.heaterTemp = heaterTemp
-        self.coolerTemp = coolerTemp
     }
     
     /**
