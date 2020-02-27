@@ -11,6 +11,7 @@
 		6A3707EF2406842700D21C15 /* RoomRepresentationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3707EE2406842700D21C15 /* RoomRepresentationCell.swift */; };
 		6A3F334B24071825002533FE /* Visualisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3F334A24071825002533FE /* Visualisation.swift */; };
 		6A57830B2407E30A00870107 /* BuildingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A57830A2407E30A00870107 /* BuildingFooterView.swift */; };
+		6A57830D2408677400870107 /* Documentation.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6A57830C2408677400870107 /* Documentation.rtf */; };
 		6A70061B240570E000DB90C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70061A240570E000DB90C8 /* AppDelegate.swift */; };
 		6A70061D240570E000DB90C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70061C240570E000DB90C8 /* SceneDelegate.swift */; };
 		6A70061F240570E000DB90C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70061E240570E000DB90C8 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		6A3707EE2406842700D21C15 /* RoomRepresentationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRepresentationCell.swift; sourceTree = "<group>"; };
 		6A3F334A24071825002533FE /* Visualisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visualisation.swift; sourceTree = "<group>"; };
 		6A57830A2407E30A00870107 /* BuildingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingFooterView.swift; sourceTree = "<group>"; };
+		6A57830C2408677400870107 /* Documentation.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Documentation.rtf; sourceTree = "<group>"; };
 		6A700617240570E000DB90C8 /* Klima Anlage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Klima Anlage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A70061A240570E000DB90C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A70061C240570E000DB90C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				6A3707ED24067EF100D21C15 /* KlimaanlageRiemer_ZeroMotivationRun.entitlements */,
+				6A57830C2408677400870107 /* Documentation.rtf */,
 				6A70061A240570E000DB90C8 /* AppDelegate.swift */,
 				6A70061C240570E000DB90C8 /* SceneDelegate.swift */,
 				6A70061E240570E000DB90C8 /* ViewController.swift */,
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A700627240570E200DB90C8 /* LaunchScreen.storyboard in Resources */,
+				6A57830D2408677400870107 /* Documentation.rtf in Resources */,
 				6A700624240570E200DB90C8 /* Assets.xcassets in Resources */,
 				6A700622240570E000DB90C8 /* Main.storyboard in Resources */,
 			);
