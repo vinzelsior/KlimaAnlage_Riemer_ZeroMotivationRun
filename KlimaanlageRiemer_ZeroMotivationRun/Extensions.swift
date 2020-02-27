@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// This document contains extensions intended to add some useful, but not crucial functions to existing Frameworks.
+
 extension Double
 {
     func truncate(places : Int)-> Double

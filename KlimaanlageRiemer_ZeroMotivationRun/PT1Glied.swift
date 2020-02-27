@@ -8,14 +8,14 @@
 
 import Foundation
 
-/// This structure simulates the latency of the heating or cooling process applied to a sink that occurs naturally when changing the temperature of a temperature medium applied to said sink. This sentence has been brought to you by: absolutely unintelligible. Basically, it represents the room y'all.
+/// This structure simulates the latency of the heating or cooling process applied to a sink that occurs naturally when changing it's temperature. This sentence has been brought to you by: absolutely unintelligible. Basically, it represents the room y'all.
 struct PT1Glied {
     
-    /// time component which determines the speed of integration
+    /// Time component which determines the speed of integration
     private var dF_tau: Double
-    /// the previous value
+    /// The previous value
     private var dLastFV: Double
-    /// an internal value, which is immutable after initialisation
+    /// An internal value, which is immutable after initialisation.
     private let dExpRate: Double
 
     
@@ -33,6 +33,13 @@ struct PT1Glied {
         dExpRate = pow(2.718282, -0.1 / dF_tau)
     }
     
+    /**
+         
+            This function takes the new value, integrates it, and returns the altered value.
+         
+     - Parameter currentTemperature: the new value to integrate
+         
+*/
     mutating func integrate(currentTemperature: Double) -> Double {
        
         let dFiltOut = dLastFV * dExpRate + (currentTemperature * (1 - dExpRate))

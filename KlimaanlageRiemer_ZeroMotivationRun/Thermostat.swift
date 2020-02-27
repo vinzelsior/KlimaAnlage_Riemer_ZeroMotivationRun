@@ -8,11 +8,12 @@
 
 import Foundation
 
+/// Every instance of this structure represents a thermostat situated in a room. It controls the temperature inside, and is aware of the temperature outside of the room. The thermostat can cool or heat a room, as well as be idle.
 struct Thermostat {
     
     // MARK: Static Fields
     
-    /// temperature outside. affects all rooms the same, hence the static modifier
+    /// Temperature outside. Affects all rooms the same, hence the static modifier.
     static var outsideTemp: Double = 15
     
     // MARK: Public Fields
@@ -22,20 +23,22 @@ struct Thermostat {
     ///   helper variable, to reduce recalcualtion
     var average: Double
     
-    /// the temperature which is set in the thermostat
+    /// The temperature which is set in the thermostat.
     var targetTemp: Double {
+        // after this value changes, recalculate all affected values
         didSet {
             recalculateMinMax()
         }
     }
     
     var hysteresis: Double {
+        // after this value changes, recalculate all affected values
         didSet {
             recalculateMinMax()
         }
     }
     
-    /// indicates wether the cooler is on or off
+    /// Indicates wether the cooler is on or off.
     var cool: Bool {
         mutating get {
             // upper threshold
@@ -52,7 +55,7 @@ struct Thermostat {
         }
     }
     
-    /// indicates wether the heater is on or off
+    /// Indicates wether the heater is on or off.
     var heat: Bool {
         mutating get {
             // upper threshold
@@ -79,14 +82,14 @@ struct Thermostat {
     private var heaterTemp: Double
     private var coolerTemp: Double
     
-    /// represents the room, which the thermostat controls the temperature of.
+    /// Represents the room, which the thermostat controls the temperature of.
     private var room: PT1Glied
     
     // MARK: Methods
     
     /**
      
-     initialiser
+     Initialises the Thermostat.
      
     - Parameter initialTemp: the temperature of the room at the start of the simulation
     - Parameter targetTemp: the disired temperature of the room
@@ -95,12 +98,11 @@ struct Thermostat {
     - Parameter heaterTemp: the temperature to which a room can be heated
     - Parameter coolerTemp: the temperature to which a room can be cooled
     - Parameter tau: the time it takes, until a value is completely integrated
+     
      */
     init(initialTemp: Double, targetTemp: Double, hysteresis: Double, outsideTemp: Double = 15, heaterTemp: Double = 30, coolerTemp: Double = 10, tau: Double = 3600) {
         
         self.average = (heaterTemp + coolerTemp) / 2
-        
-// TO-DO:  implement sanitisation, so make initialiser failable.
         
         self.targetTemp = targetTemp
         self.currentTemp = initialTemp
@@ -116,7 +118,7 @@ struct Thermostat {
     }
     
     /**
-     called every update cycle. integrates the corresponding temperaure to the current roomtemp.
+     Called every update cycle. integrates the corresponding temperaure to the current roomtemp.
      */
     mutating func updateTemperature() {
         
@@ -126,7 +128,7 @@ struct Thermostat {
     }
     
     /**
-     called when either the hysteresis or targettemp changes.
+     Called when either the hysteresis or targettemp changes.
      */
     private mutating func recalculateMinMax() {
         min = (targetTemp - hysteresis) < coolerTemp ? coolerTemp + 0.1 : targetTemp - hysteresis
