@@ -12,14 +12,14 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KlimaanlageRiemer_ZeroMotivationRun" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="bj6-u7-za2">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="bj6-u7-za2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QZa-AZ-br0">
                             <size key="itemSize" width="400" height="835"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="50" height="135"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
@@ -33,29 +33,29 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rO-0r-t9f">
                                             <rect key="frame" x="0.0" y="0.0" width="400" height="835"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Tmb-R6-I6u">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Tmb-R6-I6u">
                                                     <rect key="frame" x="5" y="228" width="390" height="602"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U0k-l6-UZv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="463.66666666666669"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="148"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="iGb-23-u7u">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="463.66666666666669"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="iGb-23-u7u">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="148"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Room Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ya-2b-N1u">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="24"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="30"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="targetTempValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfW-iL-aqK">
-                                                                            <rect key="frame" x="0.0" y="218.66666666666669" width="390" height="20.333333333333343"/>
+                                                                            <rect key="frame" x="0.0" y="59" width="390" height="30"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="10" maxValue="30" minimumValueImage="thermometer.snowflake" catalog="system" maximumValueImage="thermometer.sun" translatesAutoresizingMaskIntoConstraints="NO" id="Ic2-UU-jYb">
-                                                                            <rect key="frame" x="-2" y="433.66666666666663" width="394" height="31"/>
+                                                                            <rect key="frame" x="-2" y="118" width="394" height="31"/>
                                                                             <connections>
                                                                                 <action selector="sliderValueChanged:" destination="8oz-Wo-QWH" eventType="valueChanged" id="BqO-Hj-0Xh"/>
                                                                             </connections>
@@ -148,20 +148,51 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Footer" id="FQK-h1-Hgl" customClass="BuildingFooterView" customModule="KlimaanlageRiemer_ZeroMotivationRun" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="835" width="414" height="135"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zyE-fS-vWk">
+                                    <rect key="frame" x="7" y="5" width="400" height="125"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outside Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKK-MR-Hqf">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="38.333333333333336"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwM-OW-2eP">
+                                            <rect key="frame" x="0.0" y="43.333333333333329" width="400" height="38.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="-20" maxValue="40" minimumValueImage="snow" catalog="system" maximumValueImage="sun.max" id="xCf-3E-3Xm">
+                                            <rect key="frame" x="-2" y="86.666666666666671" width="404" height="39.333333333333329"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="sliderValueChanged:" destination="FQK-h1-Hgl" eventType="valueChanged" id="bbb-8u-ch0"/>
+                                            </connections>
+                                        </slider>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="zyE-fS-vWk" firstAttribute="centerX" secondItem="FQK-h1-Hgl" secondAttribute="centerX" id="Xxa-fP-uHy"/>
+                                <constraint firstItem="zyE-fS-vWk" firstAttribute="top" secondItem="FQK-h1-Hgl" secondAttribute="top" constant="5" id="kun-KI-s3S"/>
+                                <constraint firstAttribute="bottom" secondItem="zyE-fS-vWk" secondAttribute="bottom" constant="5" id="wDK-34-ayM"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="outsideTempLabel" destination="vwM-OW-2eP" id="Ocd-da-V1J"/>
+                                <outlet property="outsideTempSlider" destination="xCf-3E-3Xm" id="WD8-4m-kcv"/>
+                            </connections>
+                        </collectionReusableView>
                     </collectionView>
                     <navigationItem key="navigationItem" id="Db1-Hi-908">
                         <nil key="title"/>
-                        <slider key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="-20" maxValue="40" minimumValueImage="snow" catalog="system" maximumValueImage="sun.max" id="xCf-3E-3Xm">
-                            <rect key="frame" x="12" y="5" width="390" height="34"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <connections>
-                                <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dYC-AE-ATa"/>
-                            </connections>
-                        </slider>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="bj6-u7-za2" id="0er-oR-h9B"/>
-                        <outlet property="outsideTempSlider" destination="xCf-3E-3Xm" id="qQV-8P-WtF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

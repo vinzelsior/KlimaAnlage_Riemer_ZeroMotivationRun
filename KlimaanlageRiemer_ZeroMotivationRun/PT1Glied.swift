@@ -26,7 +26,7 @@ struct PT1Glied {
     - Parameter tau: specifies the speed at which a value is integrated.
      
 */
-    init(tau: Double = 120, initialVal: Double) {
+    init(tau: Double, initialVal: Double) {
         dF_tau = tau
         dLastFV = initialVal
         

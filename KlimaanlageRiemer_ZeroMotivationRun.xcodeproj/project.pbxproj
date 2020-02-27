@@ -10,6 +10,7 @@
 		6A33F9112406A44000CD855E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A33F9102406A44000CD855E /* Extensions.swift */; };
 		6A3707EF2406842700D21C15 /* RoomRepresentationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3707EE2406842700D21C15 /* RoomRepresentationCell.swift */; };
 		6A3F334B24071825002533FE /* Visualisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3F334A24071825002533FE /* Visualisation.swift */; };
+		6A57830B2407E30A00870107 /* BuildingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A57830A2407E30A00870107 /* BuildingFooterView.swift */; };
 		6A70061B240570E000DB90C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70061A240570E000DB90C8 /* AppDelegate.swift */; };
 		6A70061D240570E000DB90C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70061C240570E000DB90C8 /* SceneDelegate.swift */; };
 		6A70061F240570E000DB90C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70061E240570E000DB90C8 /* ViewController.swift */; };
@@ -44,7 +45,8 @@
 		6A3707ED24067EF100D21C15 /* KlimaanlageRiemer_ZeroMotivationRun.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KlimaanlageRiemer_ZeroMotivationRun.entitlements; sourceTree = "<group>"; };
 		6A3707EE2406842700D21C15 /* RoomRepresentationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRepresentationCell.swift; sourceTree = "<group>"; };
 		6A3F334A24071825002533FE /* Visualisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visualisation.swift; sourceTree = "<group>"; };
-		6A700617240570E000DB90C8 /* KlimaanlageRiemer_ZeroMotivationRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KlimaanlageRiemer_ZeroMotivationRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A57830A2407E30A00870107 /* BuildingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingFooterView.swift; sourceTree = "<group>"; };
+		6A700617240570E000DB90C8 /* Klima Anlage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Klima Anlage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A70061A240570E000DB90C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A70061C240570E000DB90C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6A70061E240570E000DB90C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +102,7 @@
 		6A700618240570E000DB90C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6A700617240570E000DB90C8 /* KlimaanlageRiemer_ZeroMotivationRun.app */,
+				6A700617240570E000DB90C8 /* Klima Anlage.app */,
 				6A70062D240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunTests.xctest */,
 				6A700638240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunUITests.xctest */,
 			);
@@ -119,6 +121,7 @@
 				6A33F9102406A44000CD855E /* Extensions.swift */,
 				6A3F334A24071825002533FE /* Visualisation.swift */,
 				6A3707EE2406842700D21C15 /* RoomRepresentationCell.swift */,
+				6A57830A2407E30A00870107 /* BuildingFooterView.swift */,
 				6A700620240570E000DB90C8 /* Main.storyboard */,
 				6A700623240570E200DB90C8 /* Assets.xcassets */,
 				6A700625240570E200DB90C8 /* LaunchScreen.storyboard */,
@@ -162,7 +165,7 @@
 			);
 			name = KlimaanlageRiemer_ZeroMotivationRun;
 			productName = KlimaanlageRiemer_ZeroMotivationRun;
-			productReference = 6A700617240570E000DB90C8 /* KlimaanlageRiemer_ZeroMotivationRun.app */;
+			productReference = 6A700617240570E000DB90C8 /* Klima Anlage.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6A70062C240570E200DB90C8 /* KlimaanlageRiemer_ZeroMotivationRunTests */ = {
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A70061F240570E000DB90C8 /* ViewController.swift in Sources */,
+				6A57830B2407E30A00870107 /* BuildingFooterView.swift in Sources */,
 				6A3F334B24071825002533FE /* Visualisation.swift in Sources */,
 				6A70061B240570E000DB90C8 /* AppDelegate.swift in Sources */,
 				6A33F9112406A44000CD855E /* Extensions.swift in Sources */,
@@ -466,7 +470,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cedric.zwahlen.KlimaanlageRiemer-ZeroMotivationRun";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Klima Anlage";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -487,7 +491,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cedric.zwahlen.KlimaanlageRiemer-ZeroMotivationRun";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Klima Anlage";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

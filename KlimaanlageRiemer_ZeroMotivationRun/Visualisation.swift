@@ -11,8 +11,8 @@ import SpriteKit
 
 struct Visualisation {
     
-    private let heaterNode = SKSpriteNode(texture: SKTexture(image: UIImage.init(systemName: "chevron.up.square.fill")!))
-    private let coolerNode = SKSpriteNode(texture: SKTexture(image: UIImage.init(systemName: "chevron.down.square.fill")!))
+    private let heaterNode = SKSpriteNode(texture: SKTexture(image: UIImage.init(named: "up")!))
+    private let coolerNode = SKSpriteNode(texture: SKTexture(image: UIImage.init(named: "down")!))
     
     let scene: SKScene
     
@@ -22,8 +22,17 @@ struct Visualisation {
         heaterNode.isHidden = true
         coolerNode.isHidden = true
         
+        heaterNode.colorBlendFactor = 0.7
+        coolerNode.colorBlendFactor = 0.7
+        
+        heaterNode.color = .orange
+        coolerNode.color = .cyan
+        
         heaterNode.position = CGPoint(x: scene.frame.width / 2, y: scene.frame.height / 2)
         coolerNode.position = CGPoint(x: scene.frame.width / 2, y: scene.frame.height / 2)
+        
+        heaterNode.size = CGSize(width:  (scene.frame.width + scene.frame.height) / 4, height: (scene.frame.width + scene.frame.height) / 4)
+        coolerNode.size = CGSize(width:  (scene.frame.width + scene.frame.height) / 4, height: (scene.frame.width + scene.frame.height) / 4)
         
         self.scene.addChild(heaterNode)
         self.scene.addChild(coolerNode)
