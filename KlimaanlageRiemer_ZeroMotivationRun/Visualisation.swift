@@ -39,9 +39,13 @@ struct Visualisation {
         
     }
     
+    /**
+     
+     Displays the corresponding symbol.
+     
+*/
     func visualise(isCooling: Bool, isHeating: Bool) {
         heaterNode.isHidden = !isHeating
         coolerNode.isHidden = !isCooling
     }
-    
 }

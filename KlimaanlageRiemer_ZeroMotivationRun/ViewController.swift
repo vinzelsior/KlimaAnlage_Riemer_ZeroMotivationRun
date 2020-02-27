@@ -19,7 +19,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        navigationItem.prompt = "Building Layout"
+        navigationItem.prompt = "Climate Change is Real."
+        navigationItem.title = "Building Layout"
         
     }
     
