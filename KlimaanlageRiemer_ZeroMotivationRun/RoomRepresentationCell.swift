@@ -13,6 +13,7 @@ import SpriteKit
 class RoomRepresentationCell: UICollectionViewCell, SKViewDelegate, SKSceneDelegate {
     
     private var thermostat: Thermostat?
+    private var roomSimulation: Visualisation?
     
     @IBOutlet weak var visualisation: SKView!
     
@@ -27,13 +28,18 @@ class RoomRepresentationCell: UICollectionViewCell, SKViewDelegate, SKSceneDeleg
     
     override func awakeFromNib() {
         
-        thermostat = Thermostat(initialTemp: 19, targetTemp: Double(targetTempSlider!.value), hysteresis: Double(hysteresisSlider!.value), heaterTemp: Double(targetTempSlider!.maximumValue), coolerTemp: Double(targetTempSlider!.minimumValue), tau: 900)
+        thermostat = Thermostat(initialTemp: 19, targetTemp: Double(targetTempSlider!.value), hysteresis: Double(hysteresisSlider!.value), heaterTemp: Double(targetTempSlider!.maximumValue), coolerTemp: Double(targetTempSlider!.minimumValue))
         
         let scene = SKScene(size: CGSize(width: visualisation.frame.width, height: visualisation.frame.height))
+        scene.scaleMode = .aspectFill
+        
+        roomSimulation = Visualisation(scene: scene)
 
         visualisation.presentScene(scene)
         visualisation.delegate = self
         visualisation.scene?.delegate = self
+        
+        visualisation.scene?.backgroundColor = .systemBackground
         
         targetTempLabel.text = String(targetTempSlider.value.truncate(places: 2)) + "°"
         hysteresisLabel.text = "∆" + String(hysteresisSlider.value.truncate(places: 2)) + "°"
@@ -45,6 +51,8 @@ class RoomRepresentationCell: UICollectionViewCell, SKViewDelegate, SKSceneDeleg
         thermostat!.updateTemperature()
         
         currentTempLabel.text = String(thermostat!.currentTemp.truncate(places: 2)) + "°"
+        
+        roomSimulation?.visualise(isCooling: thermostat!.cool, isHeating: thermostat!.heat)
         
     }
     
