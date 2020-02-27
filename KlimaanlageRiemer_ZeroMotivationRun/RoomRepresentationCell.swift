@@ -52,11 +52,14 @@ class RoomRepresentationCell: UICollectionViewCell, SKViewDelegate, SKSceneDeleg
     
     // called for every frame, so about 60 times per second
     func update(_ currentTime: TimeInterval, for scene: SKScene) {
-        
+
+        // calculates new temperature
         thermostat!.updateTemperature()
         
+        // displays the new value
         currentTempLabel.text = String(thermostat!.currentTemp.truncate(places: 2)) + "°"
         
+        // decides whether it has to heat or cool, and displays the result
         roomSimulation?.visualise(isCooling: thermostat!.cool, isHeating: thermostat!.heat)
         
     }
