@@ -1,5 +1,4 @@
 # KlimaAnlage_Riemer_ZeroMotivationRun
-Climate change is real.
 
 Climate change is real.
 
